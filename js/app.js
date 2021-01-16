@@ -118,28 +118,35 @@
 //      - while
 //      - do while
 
+// Array and Object
+// 0, 1, 2, 3
+var fruits = ["apple", "banana", "mango", "potato", "orange"];
+var fruits = [
+    ["apple", "red"],
+    ["banana", "yellow"],
+    ["mango", "green"],
+    ["potato", "brown"],
+    ["orange", "orange"]
+];
 
-// if statement
-var marks = 96;
+// index, key => value
 
-// if(marks >= 40){
-//     console.log("Pass the exam!");
-// }else{
-//     console.log("Fail the exam!");
+
+var human = {
+    firstname: "John",
+    lastname: "Doe",
+    age: 19,
+    job: {
+        first: "Staff",
+        second: "Senior Staff",
+        third: "Manager"
+    }
+};
+
+// for(var i = 0; i < 5; i++){
+//     for(var j = 0; j < 2; j++){
+//         console.log(fruits[i][j]);
+//     }
 // }
 
-// // conditional (tenary) operator
-// var result = (marks >= 40) ? "Pass the exam!" : "Fail the exam!";
-// console.log("RESULT: ", result);
-
-if(marks >= 0 && marks < 40){           // 0 -> 39
-    console.log("FAIL THE EXAM!");
-}else if(marks >= 40 && marks < 65){    // 40 -> 64
-    console.log("PASS THE EXAM!");
-}else if(marks >= 65 && marks < 80){    // 65 -> 79
-    console.log("CREDIT IN EXAM!");
-}else if(marks >= 80 && marks <= 100){  // 80 -> 100
-    console.log("OUTSTANDING!!!");
-}else{
-    console.log("ERROR!");
-}
+console.log(typeof human);

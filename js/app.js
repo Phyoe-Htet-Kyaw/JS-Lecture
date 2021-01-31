@@ -120,33 +120,70 @@
 
 // Array and Object
 // 0, 1, 2, 3
-var fruits = ["apple", "banana", "mango", "potato", "orange"];
-var fruits = [
-    ["apple", "red"],
-    ["banana", "yellow"],
-    ["mango", "green"],
-    ["potato", "brown"],
-    ["orange", "orange"]
-];
+// var fruits = ["apple", "banana", "mango", "potato", "orange"];
+// var fruits = [
+//     ["apple", "red"],
+//     ["banana", "yellow"],
+//     ["mango", "green"],
+//     ["potato", "brown"],
+//     ["orange", "orange"]
+// ];
+// var car = [
+//     ["Volvo", "black"],
+//     ["BMW", "white", ["American", "United Kingdom"]],
+//     ["Jeep", "brown"]
+// ];
 
-// index, key => value
 
+// var human = {
+//     firstname: "John",
+//     lastname: "Doe",
+//     age: 19,
+//     job: {
+//         first: "Staff",
+//         second: "Senior Staff",
+//         third: "Manager"
+//     }
+// };
 
-var human = {
-    firstname: "John",
-    lastname: "Doe",
-    age: 19,
-    job: {
-        first: "Staff",
-        second: "Senior Staff",
-        third: "Manager"
-    }
-};
-
+// console.table(human);
 // for(var i = 0; i < 5; i++){
 //     for(var j = 0; j < 2; j++){
 //         console.log(fruits[i][j]);
 //     }
 // }
 
-console.log(typeof human);
+// Browser Object Model (BOM) => window
+// Document Object Model (DOM)
+
+// element = tag, attribute, text
+// Parent Nodes
+// Child Node / Children Nodes
+
+// Event 
+
+document.querySelector("#clickbtn").addEventListener("click", function(){
+    var headerClass = document.querySelector("#header");
+    headerClass.style.color = "#f00";
+    headerClass.style.backgroundColor = "black"; 
+})
+
+// Id
+var headerId = document.getElementById("header");
+// Class
+var headerClass = document.getElementsByClassName("header");
+// Tag
+var headerTag = document.getElementsByTagName("h1");
+// Query Selector
+var querySelector = document.querySelector(".something h1");
+// headerClass[0].innerHTML = `<h1>Hello</h1>`;
+
+var num = 1;
+// headerId.innerText = "Change Successfully!" + num;
+
+
+
+console.log(headerId);
+console.log(headerClass);
+console.log(headerTag);
+console.log(querySelector);

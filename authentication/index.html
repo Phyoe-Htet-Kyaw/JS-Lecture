@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script>
+        const session_user = sessionStorage.getItem("users"); // global variable
+        function index(){
+            if(session_user == undefined){
+                if(document.cookie.split(";")[0].split("=")[0] == undefined){
+                    location.href = "login.html";
+                }else{
+                    if(document.cookie.split(";")[0].split("=")[0] != "users"){
+                        location.href = "login.html";
+                    }
+                }
+            }
+        }
+        
+        index();
+    </script>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    <h2>You passed our authentication.</h2>
+    <p id="show-user"></p>
+    <button id="log-out">Log Out</button>
+    <script>
+        function showUser(){
+            const show_user = document.querySelector("#show-user");
+            show_user.innerText = (session_user == undefined) ? document.cookie.split(";")[0].split("=")[1] : session_user;
+        }
+
+        function logout(){
+            sessionStorage.clear();
+            document.cookie = `users=;`;
+            location.href = "login.html";
+        }
+
+        document.querySelector("#log-out").addEventListener("click", logout);
+        showUser();
+    </script>
+</body>
+</html>
